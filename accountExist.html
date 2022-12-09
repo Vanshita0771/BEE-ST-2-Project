@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Exist</title>
+    <style>
+         * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+     }
+   
+    body {
+    background: #dcd0d1;
+    font-family: 'Rubik', sans-serif;
+    }
+
+    .account {
+    background: #fff;
+    width: 300px;
+    height:200px;
+    
+    margin: 200px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+     }
+    .account h3{
+    padding: 40px 35px 0 35px;
+    font-weight: 200;
+    color:#112c5c;
+    }
+    .account .action {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .account .action button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .account .action button:hover {
+    background: #d8d8d8;
+  }
+  .account .action button:nth-child(2) {
+    background: #2d3b55;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+  }
+  .account .action button:nth-child(2):hover {
+    background: #3c4d6d;
+  }
+    </style>
+    </head>
+    <body>
+        <div class="account">
+            <h3 >Username Already Exists</h3>
+            <div class="content">
+              <p style="padding: 40px 30px 40px 40px;">Enter another Username or login with same username</p>
+                <div class="action">
+                  <button type="button"><a href="/" style="text-decoration:none;">Change Password</a></button>
+                    
+                  </div>
+                </div>
+            </div>
+</body>
+</html>

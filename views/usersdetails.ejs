@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    }
+    body {
+    background: #fcfbfb;
+    font-family: 'Rubik', sans-serif;
+    }
+    td{
+        padding: 5px;
+    }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;margin-top: 50px;">User Details</h1>
+    <table border="1" cellspacing="5" cellpadding="5" style="margin:70px 30px 30px 450px;color:rgb(35, 33, 34);padding:5px;">
+        <tr >
+            <th>Username</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Phone No</th>
+        </tr>
+       
+          <% for(var i=0;i<result.length;i++) { %>
+            <tr>
+             <td> <%= result[i].username %> </td>
+             <td> <%= result[i].password %> </td>
+             <td> <%= result[i].name %> </td>
+             <td> <%= result[i].country %> </td>
+             <td> <%= result[i].phoneno %> </td>
+            </tr>
+       <%  } %>
+        
+    </table>
+</body>
+</html>

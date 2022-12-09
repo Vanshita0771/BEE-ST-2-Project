@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login Form Example</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+<style>
+  
+  
+  body {
+    background: #dcd0d1;
+    font-family: 'Rubik', sans-serif;
+  }
+  #m_header{height:100px;width:100%;background-color:rgb(239, 132, 245)}
+  .profile-page {
+    background: #fff;
+    width: 500px;
+    margin: 100px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  }
+  .profile-page h1 {
+    padding: 35px 35px 0 35px;
+    font-weight: 300;
+    text-align: center;
+  }
+  #m_name{font-family:Harlow Solid Italic;
+    font-weight:bolder;
+    font-size:80px;
+    margin-top:10px;
+    margin-left:280px;
+    padding-right: 150px;
+    color:rgb(255, 255, 255)
+  }
+  
+  th{
+    padding-left: 80px;
+    padding-top: 10px;
+    font-size:larger;
+   
+  }
+  td{
+    padding-left: 100px;
+    padding-top: 10px;
+    font-size:larger;
+  }
+  button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: #e8e9ec;
+    color: #777;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+
+
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="m_header">
+  <img src="https://ci3.googleusercontent.com/proxy/lRCrXaEfER16aOF8MFKtM4j_2JTlM1EUD72fk5yNbHYLho93ndCbnIYR-9WUoKyFVLNHuG5xDfZGLlSjucTP3PccXmnrFY_f8IWK1BkSfXqoOcYBBwxrg8bRhA=s0-d-e1-ft#https://th.bing.com/th/id/OIP.xECFNAFYASMdEbH-20nwpwHaHa?pid=ImgDet&amp;rs=1" width="80px" height="80px" style="float:left;margin-left:20px;border-radius:50%">
+  <span id="m_name"> Fashion Paradise  </span>
+  
+    <a href="/profile" style="font-family:Harlow Solid Italic;border-radius:45%;margin-top:100px;margin-right:20px;padding:10px;width:auto;height:100px;font-size:40px;text-decoration:none;color:rgb(255, 255, 255);" >
+      <%= result[0].username %>
+    </a>
+
+  <a href="/"  style="padding:5px;width:auto;height:50px;font-size:40px;color:rgb(254, 254, 254);font-family:Harlow Solid Italic;">Logout</a>
+</div>
+<div class="profile-page">
+
+    <h1>Profile</h1>
+    <div class="content">
+       <table>
+        <tr>
+            <th>Username</th>
+            <td><%= result[0].username %></td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td><%= result[0].password %></td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td><%= result[0].name %></td>
+    </tr>
+    <tr>
+      <th>Country</th>
+      <td><%= result[0].country %></td>
+  </tr>
+  <tr>
+    <th>Phone No</th>
+    <td><%= result[0].phoneno %></td>
+</tr>
+       </table>
+       <br><br>
+    </div>
+    <div class="action">
+      <button type="button"><a href="/change" style="text-decoration:none;">Update Password</a></button>
+        
+      </div>
+</div>
+</body>
+</html>
